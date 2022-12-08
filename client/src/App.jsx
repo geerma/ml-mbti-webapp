@@ -68,11 +68,11 @@ function App() {
       <h2>Predict your MBTI via Machine Learning Models!</h2>
       <div className="prediction_container">
         <div className="text_container">
-          <label>Text</label>
+          <label>Input Text:</label>
           <textarea
             type="text"
             cols="50"
-            rows="30"
+            rows="20"
             value={text}
             onChange={(e) => handleChange(e)}
           >
@@ -92,13 +92,14 @@ function App() {
             <option>Random Forest</option>
           </select>
         </div>
-        <div className="button_container">
+        <div className="submitbutton_container">
           <button onClick={() => handleSubmit()}>Submit</button>
         </div>
         {response != undefined ? (
           <div className="response_container">
             <p>Response:</p>
-            <p>Prediction: {response.result}</p>
+            <p>Model: {model}</p>
+            <p>{response.result}</p>
           </div>
         ) : null}
       </div>
