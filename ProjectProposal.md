@@ -1,7 +1,7 @@
 # Project proposal for *ML Web App*
 Author: *Geer Ma*
 
-## 1. Why: Question/Topic being investigated 1pt
+## 1. Why: Question/Topic being investigated
 
 Currently I am most interested in creating applications with user interfaces that can be deployed and shown to users, employers, etc. 
 I have some experience in using React (with HTML/CSS/JS), and would like to see if I would be able to use my previous knowledge, combine
@@ -9,7 +9,7 @@ it with what I have learned in this Machine Learning course, to create a full-st
 been interested in, but have not yet attempted. I am an avid hackathon enthusiast and would like to utilize what I have learnt from hackathons to
 this project, and also want to use the knowledge I learn from this project (ex. creation of full-stack ML web app) to future hackathons.
 
-## 2. How: Plan of attack 1pt
+## 2. How: Plan of attack
 
 After searching on Google, I came across these two resources. I hope to follow these tutorials, try to make sense of them, and then create my own version of the applicationu using my newly-found knowledge.
 
@@ -52,7 +52,7 @@ my interpretation of the application.
     - Ex: The Flask app will have the POST endpoint /prediction, where it accepts input values as a json and returns back a prediction from ML.
 - DecisionTreeClassifier is used on the dataset
 
-## 3. What: Dataset, models, framework, components 2pts
+## 3. What: Dataset, models, framework, components
 
 Both of these tutorials follow the same concept of having a basic user interface, then having a REST API with an endpoint that can take information in as an input, feed it to the trained ML model on the server side, and then output it back to the user. The main difference is in the technologies they use, and also their complexities. Below is a rough plan of which technologies I hope to use. Some technologies (and the dataset) are pennding or may change, and will be finalized after finishing the tutorials since I will have a better idea of what I can handle and also which is easier/better.
 
