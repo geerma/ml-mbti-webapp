@@ -85,14 +85,14 @@ function App() {
           <button onClick={() => exampleText2()}>Example Text 2</button>
           <button onClick={() => exampleText3()}>Example Text 3</button>
         </div>
-        <div>
+        <div className="model_container">
           <label>Model Choice</label>
           <select onChange={(e) => handleModel(e)}>
             <option>Support Vector Classifier</option>
             <option>Random Forest</option>
           </select>
         </div>
-        <div>
+        <div className="button_container">
           <button onClick={() => handleSubmit()}>Submit</button>
         </div>
         {response != undefined ? (

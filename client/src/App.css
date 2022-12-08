@@ -10,18 +10,28 @@
   background-color: antiquewhite;
   width: 50%;
   margin: auto;
+  border: black 1px solid;
 }
 
 .text_container {
+  margin: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .button_container  {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.model_container {
+  margin: 1rem;
   display: flex;
   flex-direction: row;
 }
 
 .response_container {
+  margin: 1rem;
   color: white;
 }
