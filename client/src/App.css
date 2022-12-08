@@ -5,6 +5,7 @@
   align-items: center;
   margin: auto;
   color: #353333;
+  /* Colors from: https://www.schemecolor.com/pastel-gradient.php */
   background: linear-gradient(217deg, rgba(156, 220, 170,.8), rgba(150, 202, 247,0) 70.71%),
   linear-gradient(127deg, rgba(191, 178, 243,.8), rgba(229, 225, 171,0) 70.71%),
   linear-gradient(336deg, rgba(243, 198, 165,.8), rgba(248, 163, 168,0) 70.71%);
