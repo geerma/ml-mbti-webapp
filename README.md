@@ -2,49 +2,7 @@
 
 ## Background
 
-As mentioned in the Project Proposal, this mini-project puts machine learning into production as a Full-Stack Web Development project. 
-
-### Important Code Files:
-
-```
-server\app.py # Flask server
-server\mbti_1.csv # Dataset from Kaggle
-server\mbti_notebook.ipynb # Jupyter Notebook containing most info.
-server\model_generator # Test how to generate joblib files from classifer.
-server\requirements.txt # Packages/dependencies required
-server\joblib # Joblib files (classifiers, cntizer, tfizer)
-
-client\src\App.jsx # Majority of the frontend code (aside from styling)
-```
-
-## How to Run
-
-Create a virtual environment then install all requirements
-
-```
-python -m venv venv # Command for Windows
-venv\Scripts\activate.bat 
-pip install -r requirements.txt # Installs all necessary packages required
-```
-
-Note above that if there are compabilities issues with the versions, you could try installing from requirementsOLD (does not contain all, but contains most), and then installing any other packages that you require.
-
-First run the server
-```
-cd server
-# (MIGHT NEED TO RUN python app.py first so that it sets flask environment
-# Or use FLASK_APP=app.py)
-flask run # Runs the server
-```
-
-Run the client
-```
-cd client
-npm install # Installs node modules. No need to do this after first time
-npm run dev # Runs the client
-```
-
-Then with the client and server running at the same time, the client can make requests to the server via an API endpoint request.
+This is a project that is aimed to learn how to deploy a Machine Learning model into production via a web application. Technologies used include React.js, Flask, Scikit-learn, JavaScript, Python, and Jupyter Notebook.
 
 ## Results
 
@@ -55,7 +13,6 @@ This dataset contains over 8600 rows of data, which the columns being the type o
 Firstly, we can examine the dataset by counting the number of posts for each type. We can notice that ENFJ has the highest number of posts, followed by ENFP, ENTJ, etc. It is interesting to note that the users with the highest number of posts are all Extroverts. We could come to an inference that extroverted people tend to post more. Now another thing to point out is that this is an unbalanced dataset, whereby we have fewer data for introverted users. This may pose to be a problem as we get into the machine learning portion.
 
 ![Dataplot1](/screenshots/plot1.png?raw=true "Server input")
-![Dataplot2](/screenshots/plot2.png?raw=true "Server input")
 
 After looking at the data, to proceed with the Machine Learning section, we would need to pre-process the data. **Disclaimer:** Note that since this dataset was extremely difficult to handle correctly, I required assistance from a Kaggle Notebook. Much of the pre-process code comes from [MBTI Kaggle](https://www.kaggle.com/code/rajshreev/mbti-personality-predictor-using-machine-learning). However, I have read,understood the code and learned from it. The first iteration of preprocessing required the removing of links (since links were not indicative of personality), punctuations, stopwords (like 'uh'), short words, and random mbti within the sentences itself. I then utilized Logistic Regression as the classification model. However, this proved to be inaccurate and I had a second iteration of preprocessing of data.
 
@@ -118,6 +75,48 @@ I went with the tutorial from [towardsdatascience](https://towardsdatascience.co
 A positive deviation was that I had only planned on using one Machine Learning model in the proposal, but I managed to test 3 models (LogReg, RF, and SVC) and used joblib to serve two ML models. Additionally, I was scared that I would not have been able to figure out the MBTI dataset, and thought about using Heart Disease dataset as a backup, which luckily I did not have to do that. 
 
 I did, however, need to use a resource which was the [MBTI Kaggle Notebook](https://www.kaggle.com/code/rajshreev/mbti-personality-predictor-using-machine-learning) that I keep mentioning throughout this report. This would be another deviation since I did not mention it in my proposal. The notebook was extremely helpful especially for the pre-processing stage, but also it had guidelines for the Machine Learning section as wells (ex. training the model for 4 iterations).
+
+## How to Run Locally
+
+Create a virtual environment then install all requirements
+
+```
+python -m venv venv # Command for Windows
+venv\Scripts\activate.bat 
+pip install -r requirements.txt # Installs all necessary packages required
+```
+
+Note above that if there are compabilities issues with the versions, you could try installing from requirementsOLD (does not contain all, but contains most), and then installing any other packages that you require.
+
+First run the server
+```
+cd server
+# (MIGHT NEED TO RUN python app.py first so that it sets flask environment
+# Or use FLASK_APP=app.py)
+flask run # Runs the server
+```
+
+Run the client
+```
+cd client
+npm install # Installs node modules. No need to do this after first time
+npm run dev # Runs the client
+```
+
+Then with the client and server running at the same time, the client can make requests to the server via an API endpoint request.
+
+### Important Code Files:
+
+```
+server\app.py # Flask server
+server\mbti_1.csv # Dataset from Kaggle
+server\mbti_notebook.ipynb # Jupyter Notebook containing most info.
+server\model_generator # Test how to generate joblib files from classifer.
+server\requirements.txt # Packages/dependencies required
+server\joblib # Joblib files (classifiers, cntizer, tfizer)
+
+client\src\App.jsx # Majority of the frontend code (aside from styling)
+```
 
 ## Resources Used
 
